@@ -1,3 +1,6 @@
+import java.util.*;
+import java.io.*;
+
 public class Maze{
     private char[][]board;
     private int maxX;
@@ -5,7 +8,7 @@ public class Maze{
     public Maze(){
 	maxX=40;
 	maxY=20;
-	board=newchar[maxX][maxY];
+	board=new char[maxX][maxY];
 	try{
 	    Scanner sc = new Scanner(new File("maze.dat"));
 	    int j=0;
@@ -19,9 +22,19 @@ public class Maze{
 	} catch (Exception e){}
     }
     public String toString(){
+	//String s = "[2J\n";
 	String s = "[2J\n";
-	s = s + "[31;43m";
+	//s = s + "[31;43m";
 	for (int y=0;y<maxY;y++){
-
-	}
+	    for (int x=0;x<maxX;x++){
+		s = s + board[x][y];
+	    }
+	    s=s+"\n";
+	} return s;
+    }
+    public static void main(String[] args){
+	Maze m = new Maze();
+	System.out.println(m);
+	System.out.println(m);
+    }
 }
