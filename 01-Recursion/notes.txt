@@ -1,0 +1,10 @@
+Path finding is a search function
+blind search
+depth first search - try to go as deep down one path as we can before we come
+      back
+state space search
+nodes represent things, edges connect nodes
+huristic search (blind search) blindly tries all possibilities
+      always try to move closer
+      puzzle: move piece closer to final destination
+
