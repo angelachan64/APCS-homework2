@@ -8,3 +8,5 @@ huristic search (blind search) blindly tries all possibilities
       always try to move closer
       puzzle: move piece closer to final destination
 
+implicit data structure - graph exists behind method, creating/destroying nodes
+      as program works
