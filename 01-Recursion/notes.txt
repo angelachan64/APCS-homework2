@@ -10,3 +10,9 @@ huristic search (blind search) blindly tries all possibilities
 
 implicit data structure - graph exists behind method, creating/destroying nodes
       as program works
+_______________________________________________________________________________
+
+knights tour - given an n by n board, find a sequence of moves such that a
+      knight can visit every square once wihout repetition
+      - there should be a solution for every starting position from a 5x5 board
+      	and bigger
