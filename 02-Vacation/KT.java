@@ -21,9 +21,9 @@ public class KT{
 		n++;
 	    }
 	}*/
-	for (int r=0;r<size;r++){
-	    for (int c=0;c<size;c++){
-		if (r<=1 || c<=1 || r>=size-2 || c>=size-2){
+	for (int r=0;r<size+2;r++){
+	    for (int c=0;c<size+2;c++){
+		if (r<=1 || c<=1 || r>=size || c>=size){
 		    board[r][c] = -1;
 		} else{
 		    board[r][c] = 0;
@@ -32,8 +32,8 @@ public class KT{
 	}
     }
     public void print(){
-        for (int row=0;row<size;row++){
-	    for (int col=0;col<size;col++){
+        for (int row=0;row<size+2;row++){
+	    for (int col=0;col<size+2;col++){
 		System.out.printf("%4d",board[row][col]);
 	    }
 	    System.out.printf("\n");
