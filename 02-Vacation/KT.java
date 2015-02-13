@@ -13,7 +13,7 @@ public class KT{
     public KT(){
 	size = rnd.nextInt(7) + 4;
 	size = 5;
-	board = new int[size][size];
+	board = new int[size+2][size+2];
 	/*int n = 1;
 	for (int r=0;r<size;r++){
 	    for (int c=0;c<size;c++){
@@ -23,7 +23,11 @@ public class KT{
 	}*/
 	for (int r=0;r<size;r++){
 	    for (int c=0;c<size;c++){
-		board[r][c] = 0;
+		if (r<=1 || c<=1 || r>=size-2 || c>=size-2){
+		    board[r][c] = -1;
+		} else{
+		    board[r][c] = 0;
+		}
 	    }
 	}
     }
