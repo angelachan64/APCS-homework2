@@ -1,0 +1,16 @@
+---------------------------------SORTING---------------------------------------
+selection sort - select nth smallest and swap with nth location
+insertion sort - insert nth smallest so far into sublist of size n
+
+merge sort - give half to person A, half to person B & combine
+mergesort(deck){
+  if (size of deck == 1){
+    return deck
+  } else{
+    A = half the deck
+    B = half the deck
+    R1 = mergesort(A)
+    R2 = mergesort(B)
+    merge(R1,R2)
+  }
+}
