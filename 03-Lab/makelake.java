@@ -19,7 +19,7 @@ public class makelake{
 	ml.stomp(1,1,10);
 	ml.print();
 	System.out.println();
-	ml.volume(field,elevation);
+	System.out.println(ml.volume());
     }
     public  makelake(int R, int C, int E, int N){
 	field = new int[][]{{28,25,20,32,34,36},
@@ -74,12 +74,12 @@ public class makelake{
 	}
 	return max;
     }
-    public int volume(int[][] a,int e){
+    public int volume(){
         int sum=0;
-	for (int ro=0;ro<a.length;ro++){
-	    for (int co=0;co<a[ro].length;co++){
-		if (22-a[ro][co] > 0){
-		    sum += (22-a[ro][co]);
+	for (int ro=0;ro<field.length;ro++){
+	    for (int co=0;co<field[ro].length;co++){
+		if (elevation-field[ro][co] > 0){
+		    sum += (22-field[ro][co]);
 		}
 	    }
 	} return 72*72*sum;
