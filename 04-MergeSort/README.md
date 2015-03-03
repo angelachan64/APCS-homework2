@@ -15,3 +15,14 @@ ___
 ___
 <b><i>For 1000 items in an array:</b></i><br>
 ___
+<b>Selection Sort:</b><br>
+Takes around 0.125 seconds<br>
+<b>Insertion Sort:</b><br>
+Takes around 0.150 seconds<br>
+<b>Bubble Sort:</b><br>
+Takes around 0.126 seconds<br>
+<b>Merge Sort:</b><br>
+Takes around 0.059 seconds<br>
+___
+<b><i>For 100,000 items in an array:</b></i><br>
+___
