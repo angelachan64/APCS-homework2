@@ -22,23 +22,27 @@ public class mergesort{
 	}
     }
     public ArrayList<Integer> msort(ArrayList<Integer> al){
-	if (al.size()==1){
+	if (al.size()<=1){
 	    return al;
 	} int half = al.size()/2;
 	ArrayList<Integer> A = new ArrayList<Integer>();
 	ArrayList<Integer> B = new ArrayList<Integer>();
-	for (int i=0;i<half;i++){
+	int i;
+	for (i=0;i<half;i++){
 	    A.add(al.get(i));
-	} for (int n=half;n<al.size();n++){
-	    B.add(al.get(n));
-	} return merge (msort(A),msort(B));
+	} for (;i<al.size();i++){
+	    B.add(al.get(i));
+	} //System.out.println(A);
+	//System.out.println(B);
+	//System.out.println("Merging...");
+	return merge(msort(A),msort(B));
     }
     public ArrayList<Integer> merge(ArrayList<Integer> A, ArrayList<Integer> B){
 	ArrayList<Integer> ai = new ArrayList<Integer>();
 	int iA = 0; int iB = 0;
 	//int count=0,add=0;
 	while (iA < A.size() && iB < B.size()){
-	    if (A.get(0) <= B.get(0)){
+	    if (A.get(iA) <= B.get(iB)){
 		ai.add(A.get(iA));
 		iA++;
 	    } else{
@@ -56,6 +60,7 @@ public class mergesort{
 	    iB++;
 	    //add++;
 	} //System.out.println(count + " comparisons");
+	//System.out.println("Merged: " + ai);
 	return ai;
     }
 }
