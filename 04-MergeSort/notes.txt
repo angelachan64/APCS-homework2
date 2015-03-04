@@ -14,3 +14,25 @@ mergesort(deck){
     merge(R1,R2)
   }
 }
+-------------------------------------------------------------------------------
+merge sort
+  splits/levels log_BASE(2)n times
+  each split loops through the array n times
+    linear (n) component
+  the sum of each level's merge is also going to be n
+  TOTAL RUNTIME: 2n * log_BASE(2)n
+
+Big O Notation
+  a function f(n) is said to be O(g(n)) (Order g(n) or n=g-O g(n))
+  if there exists some constant k such that k(g(n)) > f(n) over the long term
+
+|     /
+|    /
+|___/_______
+|  /
+| /
+|/__________
+f(x) = x
+f(x) = 3
+(n^2)/2, 3n^2, (n^2 - n)/2 are all O(n^2) because they are greater than O(n^2)
+  over the long term (not necessarily every time)
