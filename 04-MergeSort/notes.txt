@@ -1,4 +1,4 @@
----------------------------------SORTING---------------------------------------
+---------------------------------SORTING----------------------------------------
 selection sort - select nth smallest and swap with nth location
 insertion sort - insert nth smallest so far into sublist of size n
 
@@ -14,7 +14,7 @@ mergesort(deck){
     merge(R1,R2)
   }
 }
--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 merge sort
   splits/levels log_BASE(2)n times
   each split loops through the array n times
@@ -36,3 +36,15 @@ f(x) = x
 f(x) = 3
 (n^2)/2, 3n^2, (n^2 - n)/2 are all O(n^2) because they are greater than O(n^2)
   over the long term (not necessarily every time)
+--------------------------------------------------------------------------------
+FASTEST TO SLOWEST:
+1
+log(n)
+n        -|
+nlog(n)   |-typically going to be working here
+n^2      -|
+--------
+n^3
+n^4
+2^n ****GETS TOO BIG VERY QUICKLY
+n!  ****GETS TOO BIG VERY QUICKLY
