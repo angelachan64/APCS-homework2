@@ -1,0 +1,45 @@
+------------------------------SELECT WITH ARRAYS--------------------------------
+first time:
+array A, kth smallest term
+L=0, H=A.length
+EXAMPLE: [3,8,12,4,5,9,6,2,7,10,-,-,-,-,-,-,-,-,-,-] (- means it's too big)
+
+1. Select pivot
+2. Swap pivot value with value in A[H]
+   - [3,8,12,4,5,9,10,2,7,6]
+3. Li = L, Hi = H-1 (low index = low, high index = high-1)
+   - if A[Li] < P (p = pivot)
+     	Li++
+     else
+	swap A[Li] and A[Hi]
+	Hi--
+     - EXAMPLE:
+       first runthrough:
+          [3,8,12,4,5,9,10,2,7,6]
+          Li=0,Hi=8 --> Li++ --> Li=1
+       second runthrough:
+          [3,7,12,4,5,9,10,2,8,6] A[1] swapped with A[8] because 8>6
+          Li=1,Hi=8 --> Hi-- --> Hi=7
+       third runthrough:
+          [3,2,12,4,5,9,10,7,8,6] A[1] swapped with A[7] because 7>6
+          Li=1,Hi=7 --> Hi-- --> Hi=6
+       fourth runthrough:
+          [3,2,12,4,5,9,10,7,8,6]
+	  Li=1,Hi=6 --> Li++ --> Li=2
+       fifth runthrough:
+          [3,2,10,4,5,9,12,7,8,6] A[2] swapped with A[6] because 12>6
+	  Li=2,Hi=6 --> Hi-- --> Hi=5
+       sixth runthrough:
+          [3,2,9,4,5,10,12,7,8,6] A[2] swapped with A[5] because 10>6
+	  Li=2,Hi=5 --> Hi-- --> Hi=4
+       seventh runthrough:
+          [3,2,5,4,9,10,12,7,8,6] A[2] swapped with A[4] because 9>6
+          Li=2,Hi=4 --> Hi-- --> Hi=3
+       eighth runthrough:
+          [3,2,5,4,9,10,12,7,8,6]
+	  Li=2,Hi=4 --> Li++ --> Li=3
+       ninth runthrough:
+          [3,2,5,4,9,10,12,7,8,6]
+          Li=3,Hi=4 --> Li++ --> Li=4
+       tenth runthrough:
+          [3,2,5,4,6,10,12,7,8,9] swapped A[4] with A[9] because Li=Hi
