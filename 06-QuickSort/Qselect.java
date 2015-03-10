@@ -58,21 +58,19 @@ public class Qselect{
 
 		
 		
-    public int qselect(int[] a, int k, int l, int h){
+    public void qselect(int[] a, int l, int h){
 	int pi,pval;
 	pi = partition(a,l,h);
 	pval = a[pi];
-	if (k==pi)
-	    return pval;
-	else if (k > pi)
-	    return qselect(a,k,pi+1,h);
-	else
-	    return qselect(a,k,l,pi-1);
+	if (pi - l > 1)
+            qselect(a,l,pi-1);
+        if (h - pi > 1)
+            qselect(a,pi+1,h);
     }
 		
-    public int select(int k){
+    public void select(){
 	b = Arrays.copyOf(a,a.length);
-	return qselect(b,k,0,b.length-1);
+        qselect(b,0,b.length-1);
     }
 		
     public static void main(String[] args) {
@@ -83,8 +81,8 @@ public class Qselect{
 	}*/
 	System.out.println();
 	//Arrays.sort(q.a);
-	q.qselect(a,);		
-	System.out.println(q);
+	q.select();		
+	System.out.println(Arrays.toString(q.b));
 
     }
 }
