@@ -1,0 +1,18 @@
+---------------------------------QUICK SORT-------------------------------------
+- the best pivot position would be at n/2
+  - if we can choose the best pivot, there would be log_BASE(2)n levels
+    - because each level does n amount of operations, the total work done (if
+      you continuously choose the best partition) would be n*log_BASE(2)n
+  - you could find the best pivot by sorting then finding the middle
+    (INEFFICIENT)
+  - you could use Qselect to find the best pivot
+  - if you continuously choose the worst possible pivot every time, it would be
+    n^2 work done
+  - the typical case would get O(n*logn)
+- take first, middle, and last elements & take median can help to find a decent
+  pivot
+  - guarantees at least that you won't get the worst pivot
+- why use quicksort instead of mergesort?
+  - with the quicksort, everything happens inside the array (unlike mergesort)
+    - mergesort uses more memory because it's not in place
+- you get a logarithmic component when you divide out a part of your data set
