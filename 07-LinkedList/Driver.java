@@ -13,5 +13,8 @@ public class Driver{
 
 	n.getNext().setData("pickle");
 	System.out.println(n2);
+
+	n2.setData("watermelon");
+	System.out.println(n.getNext().getData());
     }
 }
