@@ -10,5 +10,8 @@ public class Driver{
 
 	System.out.println(n.getNext().getData());
 	System.out.println(n.getNext());
+
+	n.getNext().setData("pickle");
+	System.out.println(n2);
     }
 }
