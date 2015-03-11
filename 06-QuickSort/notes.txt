@@ -1,4 +1,4 @@
----------------------------------QUICK SORT-------------------------------------
+----------------------------------QUICK SORT------------------------------------
 - the best pivot position would be at n/2
   - if we can choose the best pivot, there would be log_BASE(2)n levels
     - because each level does n amount of operations, the total work done (if
@@ -16,3 +16,12 @@
   - with the quicksort, everything happens inside the array (unlike mergesort)
     - mergesort uses more memory because it's not in place
 - you get a logarithmic component when you divide out a part of your data set
+
+---------------------------------LINKED LIST------------------------------------
+- a linked list is comprised of elements or nodes that contain some data and
+  information on how to get to the next node
+- several different forms of the linked list
+  - basic link list : A > J > Mi > Ma > D
+  - circular link list : A > J > Mi > Ma > D > AX
+  - etc...
+- a set of nodes and a way to get to the "start" node
