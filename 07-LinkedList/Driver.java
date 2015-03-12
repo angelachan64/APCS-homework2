@@ -16,5 +16,8 @@ public class Driver{
 
 	n2.setData("watermelon");
 	System.out.println(n.getNext().getData());
+
+	n2.setNext(new Node("abc"));
+	System.out.println(n.getNext().getNext().getData());
     }
 }
