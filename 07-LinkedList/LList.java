@@ -5,6 +5,8 @@ public class LList{
 	//l = new Node(s);
 	//l.setNext(null);
 	Node tmp = new Node(s);
+	tmp.setNext(l);
+	l = tmp;
     }
 
     public String toString(){
