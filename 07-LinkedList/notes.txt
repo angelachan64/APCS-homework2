@@ -4,3 +4,10 @@ n -> [STRING|next{}]
      [hello]   n2 > [STRING|next{}]
                        v
                     [world]
+
+if you want to add a start node and have n refer to it:
+Node tmp = new Node("start");
+tmp.setNext(n);
+tmp = n;
+
+Then tmp is set to start of list, n becomes tmp
