@@ -19,5 +19,15 @@ public class Driver{
 
 	n2.setNext(new Node("abc"));
 	System.out.println(n.getNext().getNext().getData());
+
+	n.getNext().getNext().setNext(new Node("yabba dabba doo"));
+
+	Node tmp = new Node("start");
+	tmp.setNext(n);
+	n = tmp;
+
+	System.out.println(tmp);
+	System.out.println(n);
+	System.out.println(n.getNext());
     }
 }
