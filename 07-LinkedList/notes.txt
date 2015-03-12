@@ -11,3 +11,9 @@ tmp.setNext(n);
 tmp = n;
 
 Then tmp is set to start of list, n becomes tmp
+
+To loop through a linked list:
+Node Tmp = n;
+while (tmp!=null){
+    blahblahblah
+Tmp = Tmp.getNext();}
