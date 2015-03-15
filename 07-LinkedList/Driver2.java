@@ -11,5 +11,10 @@ public class Driver2{
 	    L.add(""+i);
 	}
 	System.out.println(L);
+
+	System.out.println("Fourth element: " + L.find(4));
+
+	L.insert(4, "Five");
+	System.out.println(L);
     }
 }
