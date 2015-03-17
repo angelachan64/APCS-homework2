@@ -17,3 +17,9 @@ Node Tmp = n;
 while (tmp!=null){
     blahblahblah
 Tmp = Tmp.getNext();}
+
+--------------------------ELIMINATE BORDER CASE PROBLEM-------------------------
+can change situation so :
+  - 0 elements : L > DummyNode
+  - 1 element :  L > DummyNode > Node1
+  - 2 elements : L > DummyNode > Node1 > Node2
