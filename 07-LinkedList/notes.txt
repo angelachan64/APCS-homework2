@@ -23,3 +23,10 @@ can change situation so :
   - 0 elements : L > DummyNode
   - 1 element :  L > DummyNode > Node1
   - 2 elements : L > DummyNode > Node1 > Node2
+Assignment :
+  - empty list has a dummy node
+  - keep track of length in an instance variable
+  - add(String) still adds to front
+  - add(index, String) (rename insert)
+  - rename find to get
+  - remove(index)
