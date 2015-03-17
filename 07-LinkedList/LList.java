@@ -1,5 +1,6 @@
 public class LList{
     private Node l=null;
+    private int len;
 
     public void add(String s){
 	//l = new Node(s);
@@ -7,6 +8,7 @@ public class LList{
 	Node tmp = new Node(s);
 	tmp.setNext(l);
 	l = tmp;
+	len++;
     }
 
     public String toString(){
@@ -21,7 +23,7 @@ public class LList{
     public Node find(int n){
 	int ind = 0;
 	Node ret = l;
-	while (ind<n){
+	while (ind<n && n<len){
 	    ret = ret.getNext();
 	    ind++;
 	} return ret;
@@ -30,10 +32,15 @@ public class LList{
 	int ind = 0;
 	Node insert = new Node(s);
 	Node replace = l;
-	while (ind < n-1){
-	    replace = replace.getNext();
-	    ind++;
-	} insert.setNext(replace.getNext());
-	replace.setNext(insert);
+	if (n == 0){
+	    add(s);
+	}
+	else{
+	    while (ind < n-1){
+		replace = replace.getNext();
+		ind++;
+	    } insert.setNext(replace.getNext());
+	    replace.setNext(insert);
+	} len++;
     }
 }
