@@ -42,12 +42,14 @@ public class LList{
 	/*if (n == 0){
 	    add(s);
 	}*/
-	else{
-	    while (ind < n-1){
-		replace = replace.getNext();
-		ind++;
-	    } insert.setNext(replace.getNext());
-	    replace.setNext(insert);
-	} len++;
+	while (ind < n-1){
+	    replace = replace.getNext();
+	    ind++;
+	} insert.setNext(replace.getNext());
+	replace.setNext(insert);
+	len++;
+    }
+    public void remove(int n){
+	get(n-1).setNext(get(n).getNext());
     }
 }
