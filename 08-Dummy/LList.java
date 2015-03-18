@@ -3,13 +3,13 @@ public class LList{
     private int len;
 
     public LList(){
-	Node DN = new Node("DummyNode");
+	Node DN = new Node(-1337);
 	DN.setNext(l);
 	l = DN;
 	len = 0;
     }
 
-    public void add(String s){
+    public void add(int s){
 	//l = new Node(s);
 	//l.setNext(null);
 	Node tmp = new Node(s);
@@ -27,15 +27,15 @@ public class LList{
 	return s;
     }
 
-    public Node get(int n){
+    public int get(int n){
 	int ind = 0;
 	Node ret = l;
 	while (ind<n && n<len){
 	    ret = ret.getNext();
 	    ind++;
-	} return ret;
+	} return ret.getData();
     }
-    public void add(int n, String s){
+    public void add(int n, int s){
 	int ind = 0;
 	Node insert = new Node(s);
 	Node replace = l;
@@ -49,15 +49,18 @@ public class LList{
 	replace.setNext(insert);
 	len++;
     }
-    public String remove(int n){
+    public int remove(int n){
 	if (n>=len || n<0){
-	    return "Error: Index Out of Range";
+	    return -1;
 	} Node T = l;
 	for (int i=0;i<n-1;i++){
 	    T = T.getNext();
-	} String s = T.getNext().getData();
+	} int s = T.getNext().getData();
 	T.setNext(T.getNext().getNext());
 	//get(n-1).setNext(get(n).getNext());
 	return s;
+    }
+    public int length(){
+	return len;
     }
 }
