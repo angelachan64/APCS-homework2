@@ -51,7 +51,7 @@ public class LList{
     }
     public String remove(int n){
 	if (n>=len || n<0){
-	    return;
+	    return "Error: Index Out of Range";
 	} Node T = l;
 	for (int i=0;i<n-1;i++){
 	    T = T.getNext();
