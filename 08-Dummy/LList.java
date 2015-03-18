@@ -49,7 +49,15 @@ public class LList{
 	replace.setNext(insert);
 	len++;
     }
-    public void remove(int n){
-	get(n-1).setNext(get(n).getNext());
+    public String remove(int n){
+	if (n>=len || n<0){
+	    return;
+	} Node T = l;
+	for (int i=0;i<n-1;i++){
+	    T = T.getNext();
+	} String s = T.getNext().getData();
+	T.setNext(T.getNext().getNext());
+	//get(n-1).setNext(get(n).getNext());
+	return s;
     }
 }
