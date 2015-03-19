@@ -60,6 +60,30 @@ public class LList{
 	//get(n-1).setNext(get(n).getNext());
 	return s;
     }
+
+    //OTHER SOLUTIONS
+
+    /*public boolean remove(int n){
+	Node tmp = l;
+	while (tmp.getNext() != null){
+	    if (T.getNext().getData() == n){
+		T.setNext(T.getNext().getNext());
+		return true;
+	    }
+	} return false;
+    }
+    public boolean remove(int n){
+	T = L.getNext();
+	T2 = L;
+	while (T != null){
+	    if (T.getData() == n){
+		T2.setNext(T.getNext());
+		return true;
+	    } T2 = T;
+	    T.getNext();
+	}
+    }*/   
+
     public int length(){
 	return len;
     }
