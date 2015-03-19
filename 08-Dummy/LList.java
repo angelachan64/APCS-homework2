@@ -9,12 +9,16 @@ public class LList{
 	len = 0;
     }
 
+    public LLitc getLLit(){
+	LLit llit = new Llit(l);
+	return llit;
+    }
     public void add(int s){
 	//l = new Node(s);
 	//l.setNext(null);
 	Node tmp = new Node(s);
-	tmp.setNext(l);
-	l = tmp;
+	tmp.setNext(l.getNext());
+	l.setNext(tmp);
 	len++;
     }
 
