@@ -15,8 +15,11 @@ public Node getStart(){
 }
 public static void main(String[] args){
     Node T = L.getStart();
+    //T.getNext().setNext(null); Example of why this power is bad
     while (L!=null){
         System.out.println(L.getData());
         L = L.getNext();
     }
 }
+
+not "the java way" because it gives people outside too much power
