@@ -1,0 +1,22 @@
+-------------------------------------3/19/15------------------------------------
+Piggybacking pointers:
+- have 2 pointers
+  - one T, one T2
+  - T2 follows after T
+- will only work for LList if it has the Dummynode
+
+ArrayList is fast because it's built with an array and is already optimized
+LinkedList is more optimized than LList
+In order to efficiently go through every element, you must have a pointer in
+  the linked list
+
+public Node getStart(){
+    return T.getNext();
+}
+public static void main(String[] args){
+    Node T = L.getStart();
+    while (L!=null){
+        System.out.println(L.getData());
+        L = L.getNext();
+    }
+}
