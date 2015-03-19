@@ -23,3 +23,9 @@ public static void main(String[] args){
 }
 
 not "the java way" because it gives people outside too much power
+
+class LLiterator{
+
+}
+
+addsa  wrapper to the first element
