@@ -1,23 +1,27 @@
-public class Node{
-    private int data;
-    private Node next;
+public class Node<E>{
+    private E data;
+    private Node<E> next;
 
-    public Node(int s){
+    public Node(E s){
 	data = s;
 	next = null;
     }
+    public Node(){
+	data = null;
+	next = null;
+    }
 
-    public void setData(int s){
+    public void setData(E s){
 	data = s;
     }
-    public int getData(){
+    public E getData(){
 	return data;
     }
 
-    public void setNext(Node n){
+    public void setNext(Node<E> n){
 	next = n;
     }
-    public Node getNext(){
+    public Node<E> getNext(){
 	return next;
     }
 
