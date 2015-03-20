@@ -3,6 +3,7 @@ import java.io.*;
 
 public class LLit<E> implements Iterator<E>{
     private Node<E> l;
+    private Node<E> last;
     
     public LLit(Node<E> n){
 	l = n;
@@ -12,7 +13,7 @@ public class LLit<E> implements Iterator<E>{
     }
     public E next(){
 	//move to the next node and return the value in the node before the move
-	E s = l.getData();
+	E s = l.getData(); last = l;
 	l = l.getNext();
 	return s;
     }
