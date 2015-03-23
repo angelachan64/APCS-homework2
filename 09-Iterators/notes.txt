@@ -4,7 +4,7 @@ take from top, place on top
 not built into a language but is a concept
 myStack<Integer> s = new myStack<Integer>();
 - create an empty stack
-  - s|
+  - s|2
 
 //ALWAYS PRESENT IN STACKS
 s.push(10)
@@ -27,3 +27,9 @@ s.peek(); s.top();
 s.size()
 "cheat"
 other methods
+
+ASSIGNMENT
+- make a class called mystack
+  - operations: push, pop, empty, peek
+- preferably using generics
+- internally to be stored in a linked list of nodes
