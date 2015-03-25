@@ -1,0 +1,12 @@
+-----------------------------------QUEUES---------------------------------------
+First In First Out - FIFO
+Queue q = new Queue()
+
+q.enqueue(x)
+- add x to the back or tail of the queue
+x = q.dequeue()
+- remove and return the item at the head of the queue
+q.empty()
+- returns true or false (whether or not q is empty)
+q.front(); q.head();
+- returns but doesn't remove the front/head value

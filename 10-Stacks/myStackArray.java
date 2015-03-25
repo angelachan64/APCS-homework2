@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class myStackArray{
     private int[] stack;
 
@@ -21,6 +23,9 @@ public class myStackArray{
 	stack = tmp;
     }
     public int pop(){
+	if (empty()){
+	    throw new EmptyStackException();
+	}
 	int n = stack[stack.length-1];
 	int[] tmp = new int[stack.length-1];
 	for (int i=0;i<tmp.length;i++){
