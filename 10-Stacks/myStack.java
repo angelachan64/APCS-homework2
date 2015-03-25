@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class myStack<E>{
     public Node<E> l;
 
@@ -15,10 +17,13 @@ public class myStack<E>{
 	l = tmp;
     }
     public E pop(){
-if
-	E data = l.getData();
-	l = l.getNext();
-	return data;
+	if (empty()){
+	    throw new EmptyStackException();
+	} else{
+	    E data = l.getData();
+	    l = l.getNext();
+	    return data;
+	}
     }
     public boolean empty(){
 	return l == null;
