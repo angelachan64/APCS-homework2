@@ -10,3 +10,5 @@ q.empty()
 - returns true or false (whether or not q is empty)
 q.front(); q.head();
 - returns but doesn't remove the front/head value
+q.size()
+- returns size of the queue
