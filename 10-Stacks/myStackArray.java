@@ -26,12 +26,14 @@ public class myStackArray{
 	if (empty()){
 	    throw new EmptyStackException();
 	}
-	int n = stack[stack.length-1];
-	int[] tmp = new int[stack.length-1];
-	for (int i=0;i<tmp.length;i++){
-	    tmp[i] = stack[i];
-	} stack = tmp;
-	return n;
+	else{
+	    int n = stack[stack.length-1];
+	    int[] tmp = new int[stack.length-1];
+	    for (int i=0;i<tmp.length;i++){
+		tmp[i] = stack[i];
+	    } stack = tmp;
+	    return n;
+	}
     }
     public boolean empty(){
 	return stack.length == 0;

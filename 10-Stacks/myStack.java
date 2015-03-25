@@ -15,6 +15,7 @@ public class myStack<E>{
 	l = tmp;
     }
     public E pop(){
+if
 	E data = l.getData();
 	l = l.getNext();
 	return data;
