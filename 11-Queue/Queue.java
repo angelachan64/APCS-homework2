@@ -1,43 +1,47 @@
-public class Queue<E>{
-    private Node<E> start;
+import java.lang.IndexOutOfBoundsException;
+
+public class Queue<E> {
+
+    private Node<E> start; //Dummy Node
     private Node<E> end;
 
-    public Queue(){
+    public Queue() {
 	start = null;
 	end = null;
     }
-    public Queue(E data){
-	start = new Node<E>(data);
-	end = start;
+
+    public String toString() {
+	String s = "HEAD <-- ";
+	Node<E> temp = start;
+	while (temp != null) {
+	    s += temp.getData() + " <-- ";
+	    temp = temp.getNext();
+	}
+	return s + "TAIL";
     }
 
-    public void enqueue(E data){
-	if (size() == 0){
+    public void enqueue(E data) {
+	if (start == null) {
 	    start = new Node<E>(data);
 	    end = start;
-	} else{
-	    Node<E> tmp = new Node<E>(data);
-	    end.setNext(tmp);
-	    end = tmp;
+	} else {
+	    Node<E> temp = new Node<E>(data);
+	    end.setNext(temp);
+	    end = temp;
 	}
     }
-    public E dequeue(){
-	E tmp = start.getData();
+
+    public E dequeue() {
+	Node<E> temp = start;
 	start = start.getNext();
-	return tmp;
+	return temp.getData();
     }
-    public boolean empty(){
+
+    public boolean empty() {
 	return start == null;
     }
-    public E head(){
+
+    public E head() {
 	return start.getData();
-    }
-    public int size(){
-	Node<E> tmp = start;
-	int count = 0;
-	while (tmp.getNext() != null){
-	    tmp = tmp.getNext();
-	    count++;
-	} return count;
     }
 }

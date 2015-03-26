@@ -1,20 +1,52 @@
-import java.util.*;
-import java.io.*;
-
-public class Driver{
-    public static void main(String[] args){
-	Random r = new Random();
+public class Driver {
+    
+    public static void main(String[] args) {
+	
 	Queue<Integer> q = new Queue<Integer>();
-	System.out.println("Empty? " + q.empty());
-	for (int i=0;i<10;i++){
-	    int add = r.nextInt(10);
-	    System.out.println(add);
-	    q.enqueue(add);
+
+	System.out.println("Empty: " + q.empty());
+	System.out.println("q: " + q);
+
+	System.out.println();
+	for (int i = 0; i < 10; i++) {
+	    q.enqueue(i);
 	}
-	System.out.println("Empty? " + q.empty());
-	System.out.println("New size? " + q.size());
-	System.out.println("First element removed: " + q.dequeue());
-	System.out.println("New size? " + q.size());
-	System.out.println("First element: " + q.head());
+	System.out.println("Post Enqueue");
+	System.out.println("q: " + q);
+	
+	System.out.println();
+	System.out.println("Dequeue: " + q.dequeue());
+	System.out.println("Post Dequeue");
+	System.out.println("q: " + q);
+
+	System.out.println();
+	System.out.println("Head: " + q.head());
+	System.out.println("Post Head");
+	System.out.println("q: " + q);
+
+	System.out.println();
+	System.out.println("Empty: " + q.empty());
+	System.out.println("q: " + q);
+
+	System.out.println();
+	System.out.println("Completely Emptying the Queue");
+	while (!q.empty()) {
+	    System.out.println("Dequeue: " + q.dequeue());
+	}
+	System.out.println("Post Dequeue");
+	System.out.println("q: " + q);
+
+	System.out.println();
+	System.out.println("Empty: " + q.empty());
+	System.out.println("q: " + q);
+
+	System.out.println();
+	System.out.println("Adding to Queue again when it is empty again");
+	for (int i = 10; i < 20; i++) {
+	    q.enqueue(i);
+	}
+	System.out.println("Post Enqueue");
+	System.out.println("q: " + q);
+	
     }
 }
