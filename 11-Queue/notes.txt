@@ -1,0 +1,55 @@
+----------------------------------MAZE SOLVER-----------------------------------
+2D Array of char
+$ - exit
+# - path
+  - wall
+Z - me
+. - visited
+
+recursively solve(x,y) in each possible direction
+- depth first search
+  - go as deep into the problem as you can and then come back
+  - downside : solution is at beginning
+  - can work if you don't know where the answer is, might be far away, looks at
+    every possibility, will find a way out
+recursion stack stores how to get back
+- breadth first search
+  - search surrounding area in radius
+
+letters will be coordinates, start with A
+
+    B
+    C
+   DAEFG
+    H
+    I
+    JKLM
+
+frontier - place not yet explored
+- q.enqueue(startNode) //put start node on frontier (q) and mark as visited
+  - A
+while():
+  current = q.dequeue() //first node in frontier
+  - frontier : *EMPTY*
+  - N = A
+  - possible next places : C, D, E, H
+    - put on frontier - enqueue
+  for each unvisited neighbor n of current:
+    q.enqueue(n)
+    - enqueue E, H, D, C
+- pull off E, add unvisited neighbors of E : enqueue(F)
+- pull off H, enqueue(I)
+- pull off D, no neighbors to add
+- pull off C, enqueue(B)
+- pull off F, enqueue(G)
+- pull off I, enqueue(J)
+- pull off B, no neighbors to add
+- pull off G, no neighbors to add
+- pull off J, enqueue(K) > enqueue(L) > enqueue(M) > no neighbors to add
+
+if you want to look at every node, while(!q.empty())
+Node - x, y, char
+while (!q.empty()):
+  current = q.dequeue()
+  if(board[current.getX()][current.getY()] == exit)
+    for each
