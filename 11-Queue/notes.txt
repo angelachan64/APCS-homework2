@@ -52,4 +52,15 @@ Node - x, y, char
 while (!q.empty()):
   current = q.dequeue()
   if(board[current.getX()][current.getY()] == exit)
-    for each
+    for each unvisited neighbor n of current
+      mark n as visited
+      q.enqueue(n)
+
+--------------------------------MORE MAZE SEARCH--------------------------------
+while (!q.empty())
+  if (x,y == exit)
+    
+  current = q.dequeue()
+  for each unvisited neighor n of current
+    mark n as visited
+    q.enqueue(n)
