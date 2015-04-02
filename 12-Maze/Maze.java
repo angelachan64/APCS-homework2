@@ -66,10 +66,29 @@ public class Maze{
 	if (!solved){
 	    board[x][y]=visited;
 	}*/
-	q.enqueue(new Node<Character>(board[x][y]);
+	frontier = new Queue();
+	frontier.enqueue(board[x][y], x, y);
+	//System.out.println(frontier);
+	//System.out.println(x);
+	//System.out.println(frontier.head().getX());
 	while (!frontier.empty()){
-	    current = frontier.dequeue();
-	    q.enqueue(board[
+	    Node<Character> current = frontier.dequeue();
+	    board[current.getX()][current.getY()] = me;
+	    //System.out.println(current.getX());
+	    //System.out.println(current.getY());
+	    if(board[current.getX()+1][current.getY()] == path){
+		frontier.enqueue(board[current.getX()+1][current.getY()], current.getX()+1, current.getY(), current);
+	    } if(board[current.getX()-1][current.getY()] == path){
+		frontier.enqueue(board[current.getX()-1][current.getY()], current.getX()-1, current.getY(),current);
+	    } if(board[current.getX()][current.getY()+1] == path){
+		frontier.enqueue(board[current.getX()][current.getY()+1], current.getX(), current.getY()+1, current);
+	    } if(board[current.getX()][current.getY()-1] == path){
+		frontier.enqueue(board[current.getX()][current.getY()-1], current.getX(), current.getY()-1, current);
+	    }
+	    try{
+		Thread.sleep(25);
+	    } catch (Exception e){}
+	    System.out.println(this);
 	}
     }
     public static void main(String[] args){
