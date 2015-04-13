@@ -76,6 +76,7 @@ public class Maze{
 	while (!frontier.empty() && !solved){
 	    Node<Character> current = frontier.dequeue();
 	    if(board[current.getX()][current.getY()] == exit){
+		System.out.println(current);
 	    	while(current.getPrev() != null) {
 	    		route.enqueue(path, current.getX(), current.getY(), current);
 	    		if (current.getData() != exit) {
