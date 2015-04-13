@@ -13,10 +13,12 @@ public class Node<E>{
 	x = xcor;
 	y = ycor;
 	next = null;
+	previous = null;
     }
     public Node(){
 	data = null;
 	next = null;
+	previous = null;
     }
 
     public void setData(E s){
@@ -37,6 +39,13 @@ public class Node<E>{
     }
     public Node<E> getNext(){
 	return next;
+    }
+    
+    public void setPrev(Node<E> n){
+        previous = n;
+    }
+    public Node<E> getPrev(){
+        return previous;
     }
 
     public String toString(){
