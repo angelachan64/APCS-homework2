@@ -1,0 +1,4 @@
+-------------------------------BEST FIRST SEARCH--------------------------------
+use a priority queue using the distance as the priority
+- when you add each node to the frontier, first assign a priority and then add
+  to the frontier which is a priority queue (ordered list)

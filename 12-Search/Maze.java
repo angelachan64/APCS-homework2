@@ -67,8 +67,18 @@ public class Maze{
 	}
     }
 
+    public void addToFront(int tx, int ty, Node current){
+	Node tmp = null;
+	if (board[tx][ty] == path){
+	    tmp = new Node(tx,ty);
+	    tmp.setPrev(current);
+	    //f.add(tmp);
+	}
+    }
+
     public void bfs(int x, int y){
 	frontier f = new frontier();
+	//StackFront f = new StackFront();
 
 	//add initial node to the frontier
 	f.add(new Node(x,y));
@@ -87,7 +97,7 @@ public class Maze{
 		break;
 	    }
 
-	    board[cx][cy] = 'z';
+	    board[cx][cy] = visited;
 	    Node tmp;
 
 	    tx = cx+1;
@@ -129,7 +139,7 @@ public class Maze{
 	}
 	//recover the path
 	for (Node p = current.getPrev();p != null;p = p.getPrev()){
-	    board[p.getX()][p.getY()]='P';
+	    board[p.getX()][p.getY()]=me;
 	    try{
 		Thread.sleep(100);
 	    } catch (Exception e){}
