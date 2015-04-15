@@ -9,3 +9,12 @@ maze herristics
 -----------------------------------A* SEARCH------------------------------------
 the priority of Node n is the cost to get to node n + estimated distance to goal
 - used by self driving cars
+----------------------------------ASSIGNMENT------------------------------------
+best first search
+- priority = estimate to exit
+  - implement add/remove as a priority queue
+  - modify node to add priority
+1.) euclidean distance 
+2.) manhattan distance
+3.) A* distance (priority: number of steps so far + estimate to exit)
+    - track steps taken
