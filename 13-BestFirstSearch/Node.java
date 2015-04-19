@@ -4,7 +4,7 @@ import java.io.*;
 public class Node{
     private int x,y;
     private Node prev,next;
-    private int priority;
+    private double priority;
 
     public Node(int x, int y){
 	this.x = x;
@@ -33,7 +33,7 @@ public class Node{
 	next = n;
     }
 
-    public int getPriority(){
+    public double getPriority(){
 	return priority;
     }
 }
