@@ -93,7 +93,7 @@ public class Maze{
     */
     public void addToFront(int tx,int ty, Node current){
 	Node tmp = null;
-	if (board[tx][ty]=='#' || board[tx][ty]=='$'){
+	if (board[tx][ty]==path || board[tx][ty]==exit){
 	    tmp = new Node(tx,ty);
 	    tmp.setPrev(current);
 	    f.add(tmp);

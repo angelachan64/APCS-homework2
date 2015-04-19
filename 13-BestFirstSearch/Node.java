@@ -9,7 +9,7 @@ public class Node{
     public Node(int x, int y){
 	this.x = x;
 	this.y = y;
-	priority = Math.sqrt((26-x)*(26-x) + (18-y)*(18-y));
+	priority = Math.sqrt((double)(26-x)*(26-x) + (double)(18-y)*(18-y));
     }
 
     public int getX(){
