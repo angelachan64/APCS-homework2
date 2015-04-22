@@ -84,3 +84,6 @@ height - the length of the longest root to leaf path
 a tree is full if it has 0 or the maximum number of allowed children
 - i.e. if you restrict the number of children per node to 4 children, the tree
   is full if the nodes are all leaves or all have 4 children
+----------------------------------BINARY TREES----------------------------------
+- each node has a leaf or has one or two children
+  - typically, the children are referred to as the left or right child
