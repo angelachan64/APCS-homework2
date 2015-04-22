@@ -1,0 +1,45 @@
+------------------------------------TREES---------------------------------------
+- specification of a graph
+  - a graph is a collection of nodes and edges
+    - nodes sometimes called vertices
+    - a node holds stuff, an edge connects nodes
+------------------------------EXAMPLES OF GRAPHS--------------------------------
+o - this is a graph
+o o - this is a graph
+
+o-o - this is a connected component
+
+o-o o - this is a graph with 2 components
+
+o-o
+ \  - this is a fully connected graph (the nodes are all connected)
+  o
+
+o-3-o
+7\ /2 - this is a weighted graph (each of the edges has a value) (there is a 
+  o   	cost associated with each of the edges)
+
+o---o
+ \ /  - this is a cycle (you can get from a node back to itself)
+  o   - you can have several cycles in a graph
+
+o---o
+|\ /|
+| X | - this graph has several cycles in it
+|/ \|
+o---o
+
+o->o
+| ^   - this is a directed graph (you can go one way but not the other in this
+V/      case
+o
+
+o<-->o
+^
+|      - this is also a directed graph
+v
+o
+--------------------------------WHAT IS A TREE?---------------------------------
+- a tree is an acyclic graph with one node designated as the root
+- a tree is either empty or has one or more nodes
+  - each node can have 0 or more children and one node is designated as the root
