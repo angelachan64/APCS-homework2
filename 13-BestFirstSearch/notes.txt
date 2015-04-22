@@ -43,3 +43,44 @@ o
 - a tree is an acyclic graph with one node designated as the root
 - a tree is either empty or has one or more nodes
   - each node can have 0 or more children and one node is designated as the root
+
+  o o
+   \|\
+o---o o---o
+|   | |       - this is TECHNICALLY a tree
+o   o o---o
+     / \   \
+    o   o   o
+
+to facilitate things, trees are typically shown top down or left to right
+     o                   o   o---o
+    / \                 /   /
+   o   o               o---o---o
+  / \   \               \   \ 
+ o   o   o               o   o---o
+
+root - starting node
+child - node parent node leads to
+ - siblings come from the same parent node
+parent - node connecting to child nodes
+leaf - node with no children
+ancestors - any nodes down the path from n to the root
+descendents - children, their children, etc
+path - follows nodes down
+height - the length of the longest root to leaf path
+
+              0        - 0 is the root, 0 is an ancestor of A
+             / \
+            1   2      - 2 is a leaf, 1&2 are children of 0
+           / \
+          3   4	       - 3&4 are siblings, 4 is the parent of 5&6
+             / \
+            5   6      - 6 is part of the path from the root to A
+           /|\   \
+          7 8 9   A    - A is a descendent of 0
+           / \   / \
+          B   C D   E  - the height of the tree is 5
+
+a tree is full if it has 0 or the maximum number of allowed children
+- i.e. if you restrict the number of children per node to 4 children, the tree
+  is full if the nodes are all leaves or all have 4 children
