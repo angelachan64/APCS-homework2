@@ -69,7 +69,7 @@ descendents - children, their children, etc
 path - follows nodes down
 height - the length of the longest root to leaf path
 
-              0        - 0 is the root, 0 is an ancestor of A
+         T--> 0        - 0 is the root, 0 is an ancestor of A
              / \
             1   2      - 2 is a leaf, 1&2 are children of 0
            / \
@@ -87,3 +87,49 @@ a tree is full if it has 0 or the maximum number of allowed children
 ----------------------------------BINARY TREES----------------------------------
 - each node has a leaf or has one or two children
   - typically, the children are referred to as the left or right child
+-----------------------------------4.23.15--------------------------------------
+                     20		  everything to the left of the root is less
+                    /  \	  than the root. Everything to the right of the	
+                   /    \	  root is greater than the root. This holds true
+                 10      40	  for all parent nodes in this tree. This is a
+                /  \    /  \	  binary search tree. This means that given any
+               /    \ 31    70	  value with value v, all the nodes in the left
+              7      13    /	  subtree have values < v and all nodes in the  
+             / \       \  62	  right subtree has values > v.
+            3   8       16  \
+                             50
+                            /
+                          55
+the actual internal structure of the tree is most like the doubly linked list
+
+public class Node{
+private int data
+private Node left, right
+get and set and constructors
+}
+
+public class Tree{
+}
+
+Node Search(Node T, Integer i){
+  while(T!=null){
+  int c = T.getData().compareTo(i);
+  if (c>0){
+    T=T.getRight();
+  }
+  else c(<0)}
+    T =T.getLeft();
+  }
+}
+
+insert(Node n)
+  if (T==null){
+    print T to the ndoe you're inserting
+  } else{
+    //insert as a new leaf
+    Node n = new Node();
+    search for the value of n but use a piggyback pointer
+    when lead pointer (T) gets to null, then piggyback (T2) will be at the node
+    before the insertion point
+    insert new node to left or right of T2 as appropriate
+}
