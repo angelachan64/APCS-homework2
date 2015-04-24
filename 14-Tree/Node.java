@@ -38,4 +38,8 @@ public class Node{
     public void setRight(Node R){
 	right = R;
     }
+
+    public String toString(){
+	return ""+data+"\n"+"Left: "+left+"\n"+"Right: "+right;
+    }
 }
