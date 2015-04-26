@@ -7,13 +7,14 @@ public class Frontier{
 
     public void add(Node n){
 		Node tmp = l.peekFirst();
-		System.out.println(tmp);
-		System.out.println(n);
 		if (tmp == null) {
 			l.add(n);
 		} else {
+			System.out.println(tmp.getPriority());
+			System.out.println(n.getPriority());
+			System.out.println(Double.compare(n.getPriority(), tmp.getPriority()));
 			int ind = 0;
-			while (Double.compare(n.getPriority(), tmp.getPriority()) < 0){
+			while (Double.compare(n.getPriority(), tmp.getPriority()) < 0 || tmp != null){
 	    		ind++;
 	    		tmp = tmp.getNext();
 			}

@@ -93,6 +93,8 @@ public class Maze{
     */
     public void addToFront(int tx,int ty, Node current){
 	Node tmp = null;
+	System.out.println(this);
+	System.out.println(board[tx][ty]==path || board[tx][ty]==exit);
 	if (board[tx][ty]==path || board[tx][ty]==exit){
 	    tmp = new Node(tx,ty);
 	    tmp.setPrev(current);
@@ -127,7 +129,7 @@ public class Maze{
 
 	    
 	    delay(20);
-	    System.out.println(this);
+	    //System.out.println(this);
 	}
 
 	// path recovery
