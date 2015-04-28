@@ -78,7 +78,7 @@ public class BinaryTree{
 	}
     }
 
-    public String toString(){
+    /*public String toString(){
 	return "Root: "+Root;
     }
 
@@ -88,6 +88,15 @@ public class BinaryTree{
 	}else{
 	    return t.getData()+"\n"+Traverse(t.getLeft())+" "+Traverse(t.getRight());
 	}
+    }*/
+
+    public String Traverse(Node t){
+	String s = "";
+	if (t == null){
+	    return "";
+	} else{
+	    s = s + Traverse(t.getLeft()) + t + Traverse(t.getRight());
+	} return s;
     }
 
     public static void main(String[] args){
