@@ -1,0 +1,10 @@
+1. get a pointer to the node to delete and its parent (T2 is at parent)
+   (same thing as the search part of insert but you stop at the node to delete)
+   a. T is a leaf
+      point T2's left or right to null
+   b. T has one child
+      point T2's left or right, as appropriate, to T's only child
+   c. T has two children
+      find the largest in the left subtree (or smallest in right)
+      copy data from L into T
+      remove from (T.getLeft(),L.getData())

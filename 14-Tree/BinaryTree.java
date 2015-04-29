@@ -78,11 +78,11 @@ public class BinaryTree{
 	}
     }
 
-    /*public String toString(){
+    public String toString(){
 	return "Root: "+Root;
     }
 
-    public String Traverse(Node t){
+    /*public String Traverse(Node t){
 	if (t == null){
 	    return null;
 	}else{
@@ -91,12 +91,11 @@ public class BinaryTree{
     }*/
 
     public String Traverse(Node t){
-	String s = "";
 	if (t == null){
 	    return "";
 	} else{
-	    s = s + Traverse(t.getLeft()) + t + Traverse(t.getRight());
-	} return s;
+	    return Traverse(t.getLeft())+"\n"+t+"\n"+Traverse(t.getRight());
+	}
     }
 
     public static void main(String[] args){

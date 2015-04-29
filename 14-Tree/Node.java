@@ -39,7 +39,10 @@ public class Node{
 	right = R;
     }
 
-    public String toString(){
+    /*public String toString(){
 	return ""+data+"\n"+"Left: "+left+"\n"+"Right: "+right;
+	}*/
+    public String toString(){
+	return ""+data;
     }
 }
