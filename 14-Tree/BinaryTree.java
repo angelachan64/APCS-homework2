@@ -98,6 +98,27 @@ public class BinaryTree{
 	}
     }
 
+    public Node remove(int n){
+	if (root == null){
+	    return root;
+	} else{
+	    boolean left = null;
+	    while(tmp.getData() != i){
+		piggyback = tmp;
+		if (i<tmp.getData()){
+		    tmp = tmp.getLeft();
+		    left = true;
+		} else{
+		    tmp = tmp.getRight();
+		    left = false;
+		}
+	    } if (tmp.getLeft() == null && tmp.getRight() == null){
+		if (left){
+		    piggyback.setLeft(new Node());
+		}
+	    }
+    }
+
     public static void main(String[] args){
 	BinaryTree tree = new BinaryTree();
 	tree.insert(tree.Root,20);

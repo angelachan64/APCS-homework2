@@ -3,7 +3,7 @@ public class Node{
     private Node left,right;
 
     public Node(){
-	data = -1337;
+	data = null;
 	left = null;
 	right = null;
     }
