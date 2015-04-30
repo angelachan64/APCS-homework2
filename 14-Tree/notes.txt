@@ -1,3 +1,4 @@
+------------------------------------REMOVE--------------------------------------
 1. get a pointer to the node to delete and its parent (T2 is at parent)
    (same thing as the search part of insert but you stop at the node to delete)
    a. T is a leaf
@@ -8,3 +9,21 @@
       find the largest in the left subtree (or smallest in right)
       copy data from L into T
       remove from (T.getLeft(),L.getData())
+-----------------------------EFFICIENT SEARCHING--------------------------------
+you want the subtrees to have generally the same amount of nodes
+- if you have an ideally shaped binary search tree, the run time of the search
+  is log(n)
+  - the runtime for search is log(n) if the tree is full/balanced
+  - however, if the tree degenerates into a list, the runtime is O(n)
+  - the runtime for remove is the same as search if it follows the method
+    specified above
+  - insert has the same runtime as search
+  - the runtime for traverse is O(n) with respect to the number of nodes, n
+red-black and 2-3 trees are guaranteed to be full
+a B tree is an extension of 2-3 trees that is guaranteed to have 511 or 512
+  children per parent
+a splay tree is a modification of a binary search tree so that it tries to keep
+  it more in balance. When you try to search for a node, it move the node you're
+  searching for to the top.
+  - rotates the tree in different ways to keep recent stuff at the top so that
+    even if the tree isn't full you'll get good performance
