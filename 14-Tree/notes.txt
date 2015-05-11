@@ -27,3 +27,38 @@ a splay tree is a modification of a binary search tree so that it tries to keep
   searching for to the top.
   - rotates the tree in different ways to keep recent stuff at the top so that
     even if the tree isn't full you'll get good performance
+-------------------------------NUMBER OF NODES----------------------------------
+Design an algorithm to determine the number of nodes in a binary tree
+base case
+- return 0 if null
+recursive reduction
+- return 1 + # nodes (left) + # nodes (right)
+public int nodecount(Node t){
+  if (t==null){
+    return 0;
+  } else{
+    return 1 + nodecount(t.getLeft()) + nodecount(t.getRight());
+  }
+}
+modification : get sum of nodes
+public int sumnode(Node t){
+  if (t==null){
+    return 0;
+  } else{
+    return t.getData() + sumnode(t.getLeft()) + sumnode(t.getRight());
+  }
+}
+Write routines to determine:
+- the max value of a tree
+- the height of a tree
+- longest leaf to leaf path
+- split dupes
+  - i.e.        3                      3
+               / \                    / \
+              2   5       -->        2   5
+             /   / \                /   / \
+            7   5   6              7   4   6
+                 \                    /
+                  7                  5
+                                      \
+                                       7
