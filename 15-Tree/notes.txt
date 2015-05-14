@@ -1,0 +1,8 @@
+-------------------------------------HEAPS--------------------------------------
+1. convert to heap - O(n)
+2. heap sort ------- O(nlogn)
+heap - everything underneath the root is either bigger or smaller
+- min heap or max heap
+Node n
+- left child is at 2n
+- right child is at 2n+1
