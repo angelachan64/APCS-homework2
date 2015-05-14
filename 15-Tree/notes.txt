@@ -7,3 +7,16 @@ Node n
 - left child is at 2n
 - right child is at 2n+1
 looking at it as if it's a tree, but it's an array
+-----------------------------------ASSIGNMENT-----------------------------------
+write class heap
+- push down
+- heap sort
+  - builds array, sorts itself
+- don't need sift up
+- find min -- O(1)
+- insert ---- O(logn)
+- removemin - O(logn)
+- reducekey
+  1. finds node
+  2. adjusts value (priority)
+  3. push down or sift up
