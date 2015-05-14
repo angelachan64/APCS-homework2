@@ -6,3 +6,4 @@ heap - everything underneath the root is either bigger or smaller
 Node n
 - left child is at 2n
 - right child is at 2n+1
+looking at it as if it's a tree, but it's an array
