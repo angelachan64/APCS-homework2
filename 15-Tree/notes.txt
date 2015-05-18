@@ -24,3 +24,35 @@ write class heap
   1. finds node
   2. adjusts value (priority)
   3. push down or sift up
+-------------------------------ANOTHER ASSIGNMENT-------------------------------
+You want to store all info on stuy students in a data structure
+you want to optimize for:
+  1. Finding a student based on 4-digit ID
+  2. Adding a student by 4-digit ID
+  3. Changing a student (found by 4-digit ID)
+you DO NOT care about:
+  1. comparing students
+  2. printing out all students
+  3. COULD add delete function, not necessary
+------------------------------HASHING/HASH TABLES-------------------------------
+looking something up is in constant time - array index
+- come up with mapping or function
+  - takes unique value and converts it into an index in an array
+    - put everything in a slot even if it doesn't work perfectly
+we want to store things in a table by index (array)
+we have to take a unique ID and convert it into a table index to store it
+- we would use a hash function for this
+  - hash function h(x) is a mapping function
+    - takes a piece of information and converts it into an index in our hash
+      table (right now, an array)
+FOR EXAMPLE:
+- OSIS numbers
+  - h(x) = x%10,000 : converts OSIS into a 4-digit index
+  - h(x) = multiply or add all non-zero digits of x, %10,000
+PROBLEM:
+- multiple objects can hash to the same slot/index
+  - clash/collision
+DEALT WITH BY:
+- hash table array has to be sufficiently large (sparsely populated)
+  - avoid collision because there are more places to put things
+- hash function should do a good job distributing items in the table
