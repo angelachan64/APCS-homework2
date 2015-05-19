@@ -56,3 +56,41 @@ DEALT WITH BY:
 - hash table array has to be sufficiently large (sparsely populated)
   - avoid collision because there are more places to put things
 - hash function should do a good job distributing items in the table
+EXAMPLE:
+int hash(String s){
+   h = 1;
+   for (i=0 to s.length){
+      h = h*11 + int(s.charAt(i));
+   }
+   return h%tablesize;
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CLOSED HASHING:
+- everything is stored in the array
+- if we have a collision:
+  - rehashing (with a secondary hash function)
+    - problem: what if there's something at the second hash function?
+    - problem: more work to do in terms of deciding whether item is what you're
+      searching for or something that was there before a rehash
+  - linear probing (put item in next slot)
+    - problem: if not at the slot it's supposed to be, have to scan down until
+      next empty slot
+    - problem: if delete one that created a collision, what do you do with the
+      rest of the items that were supposed to be in that space?
+  - leave space in table using a multiplier
+    - EXAMPLE:
+      h(x) = (x%100)*3 - leaves 2 extra spaces for collision
+    - problem: definitely wastes space, but hash table is supposed to waste
+      space
+    - spreads items out so you have enough space in your table
+insert - if done right, should get constant time unless it has collisions, then
+       	 pretty close to constant time
+retrieval - same as insert, expected constant time (unless collision, then close
+	 to constant time)
+OPEN HASHING:
+- each array element is a pointer to a linked list of values that hash to that
+  element
+- add elements to the left of the linked list (at beginning)
+insert - always constant time O(1)
+retrieval - EXPECTED constant time but O(n) with respect to the length n of
+	 linked list at the current location
